@@ -2,7 +2,7 @@
 import sys
    
 
-def to_num(num)
+def to_num(num):
     try:
         return int(num)
     except:
