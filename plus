@@ -1,0 +1,19 @@
+#!/usr/bin/python3
+# SPDX-FileCopyrightText: 2025 Shunsuke Fukuoks
+# SPDX-License-Identifier: BSD-3-Clause
+
+import sys  
+
+def to_num(num):
+    try:
+        return int(num)
+    except:
+        return float(num)
+
+
+ans = 0
+
+for line in sys.stdin:
+    ans += to_num(line)
+     
+print(ans)
