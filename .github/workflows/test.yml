@@ -4,6 +4,6 @@ jobs:
   test:
     run-on: ubuntu-latest
     steps:
-    -uses: actions/checkout@v3
-    -name: All test
+    - uses: actions/checkout@v3
+    - name: All test
      run: bash -xv ./test.bash
