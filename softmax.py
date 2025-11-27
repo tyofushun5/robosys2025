@@ -19,4 +19,6 @@ def softmax(nums: list)-> list:
 
     return [value / total for value in exps]
 
-softmax(sys.stdin)
+
+if __name__ == "__main__":
+    softmax(sys.stdin)
