@@ -24,17 +24,10 @@ def to_float_list(func):
 def output(func):
     def wrapper(*args: Any, **kwargs: Any) -> Any:
         result = func(*args, **kwargs)
-        try:
-            iterator = iter(result)
-        except TypeError:
+        if isinstance(result, list):
+            for item in result:
+                print(item)
+        else:
             print(result)
-            return result
-
-        if isinstance(result, (str, bytes)):
-            print(result)
-            return result
-
-        for item in iterator:
-            print(item)
         return result
     return wrapper
