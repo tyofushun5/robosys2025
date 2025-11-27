@@ -5,9 +5,10 @@
 import sys
 import math
 
-from tools import to_float_list
+from tools.tools import to_float_list, output
 
 
+@output
 @to_float_list
 def softmax(nums: list)-> list:
     max_num = max(nums)
@@ -18,6 +19,4 @@ def softmax(nums: list)-> list:
 
     return [value / total for value in exps]
 
-ans = softmax(sys.stdin)
-for value in ans:
-    print(value)
+softmax(sys.stdin)
