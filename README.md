@@ -1,5 +1,7 @@
 # robosys2025
 
+[![test](https://github.com/tyofushun5/robosys2025/actions/workflows/test.yml/badge.svg)](https://github.com/tyofushun5/robosys2025/actions/workflows/test.yml)
+
 ## 概要
 標準入力から読み取った数値を処理するためのコマンドラインツール集です。
 
@@ -49,6 +51,7 @@ $ seq 5 | ./softmax
 - SPDX-License-Identifier: BSD-3-Clause  
 - © 2025 Shunsuke Fukuoka
 
-このソフトウェアパッケージは 3 条項 BSD ライセンスの下で再頒布・使用できます。  
-下記スライド（CC-BY-SA 4.0 by Ryuichi Ueda）の内容を参考にし、本人の許可を得て本リポジトリの著作としています。
-- [ryuichiueda/my_slides robosys_2025](https://github.com/ryuichiueda/slides_marp/tree/master/robosys2025)
+このソフトウェアパッケージは，3 条項 BSD ライセンスの下，再頒布および使用が許可されます。  
+このパッケージは，上田隆一由来のコード（© 2025 Ryuichi Ueda）を利用しています。  
+このパッケージのコードは，下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを，本人の許可を得て自身の著作としたものです。  
+- [ryuichiueda/slides_marp/tree/master/robosys2025](https://github.com/ryuichiueda/slides_marp/tree/master/robosys2025)
