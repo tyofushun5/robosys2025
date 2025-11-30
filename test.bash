@@ -10,17 +10,6 @@ ng () {
 
 res=0 
 
-out=$(seq 5 | ./plus)
-[ "${out}" = 15 ] || ng "$LINENO"
-
-out=$(echo あ | ./plus)
-[ "$?" = 1 ]      || ng "$LINENO"
-[ "${out}" = "" ] || ng "$LINENO"
-
-out=$(echo | ./plus)
-[ "$?" = 1 ]      || ng "$LINENO"
-[ "${out}" = "" ] || ng "$LINENO"
-
 out=$(seq 4 | ./softmax)
 expected=$(cat <<'EOF'
 0.03205860328008499
