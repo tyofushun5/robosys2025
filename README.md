@@ -6,7 +6,6 @@
 標準入力から読み取った数値を処理するためのコマンドラインツール集です。
 
 ## 内容
-- `plus`: 1 行 1 数値の入力を合計する Python スクリプト
 - `softmax`: Softmax を用いて標準入力の数値を正規化するスクリプト
 - `tools/`: Python モジュール共通のデコレータ（`to_float_list`, `output`）を提供
 
@@ -18,18 +17,10 @@
 ```bash
 git clone https://github.com/USER/robosys2025.git
 cd robosys2025
-chmod +x plus softmax test.bash
+chmod +x softmax test.bash
 ```
 
 ## 使い方
-### `plus`
-```bash
-$ seq 5 | ./plus
-15
-```
-- 合計値を 1 行で表示します。
-- 数値以外や空行のみの場合は終了コード `1` で異常終了し、何も表示しません。
-
 ### `softmax`
 ```bash
 $ seq 4 | ./softmax
