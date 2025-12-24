@@ -9,9 +9,8 @@
 - `softmax`: Softmaxを用いて標準入力の数値を正規化するスクリプト
 - `tools/`: Pythonモジュール共通のデコレータ（`to_float_list`, `output`）を提供
 
-## 必要環境
-- Python3.10以上
-- POSIX互換シェル環境
+## 実行環境
+- Python3.12
 
 ## インストール
 ```bash
