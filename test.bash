@@ -1,5 +1,5 @@
 #!/bin/bash
-# SPDX-FileCopyrightText: 2025 Shunsuke Fukuoks
+# SPDX-FileCopyrightText: 2025 Shunsuke Fukuoka
 # SPDX-License-Identifier: BSD-3-Clause
 
 
@@ -8,7 +8,7 @@ ng () {
 	res=1
 }
 
-res=0 
+res=0
 
 out=$(seq 4 | ./softmax)
 expected=$(cat <<'EOF'
@@ -30,6 +30,12 @@ expected=$(cat <<'EOF'
 EOF
 )
 [ "${out}" = "${expected}" ] || ng "$LINENO"
+
+printf '' | ./softmax >/dev/null 2>&1
+[ "$?" -ne 0 ] || ng "$LINENO"
+
+printf '1\nx\n2\n' | ./softmax >/dev/null 2>&1
+[ "$?" -ne 0 ] || ng "$LINENO"
 
 [ "${res}" = 0 ] && echo OK
 exit $res

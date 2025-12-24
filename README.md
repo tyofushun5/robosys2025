@@ -3,19 +3,19 @@
 [![test](https://github.com/tyofushun5/robosys2025/actions/workflows/test.yml/badge.svg)](https://github.com/tyofushun5/robosys2025/actions/workflows/test.yml)
 
 ## 概要
-標準入力から読み取った数値を処理するためのコマンドラインツール集です。
+標準入力から読み取った数値列をSoftmaxで正規化するコマンドラインツールです。
 
 ## 内容
-- `softmax`: Softmax を用いて標準入力の数値を正規化するスクリプト
-- `tools/`: Python モジュール共通のデコレータ（`to_float_list`, `output`）を提供
+- `softmax`: Softmaxを用いて標準入力の数値を正規化するスクリプト
+- `tools/`: Pythonモジュール共通のデコレータ（`to_float_list`, `output`）を提供
 
 ## 必要環境
-- Python 3.10 以上
-- POSIX 互換シェル環境
+- Python3.10以上
+- POSIX互換シェル環境
 
 ## インストール
 ```bash
-git clone https://github.com/USER/robosys2025.git
+git clone https://github.com/tyofushun5/robosys2025.git
 cd robosys2025
 chmod +x softmax test.bash
 ```
@@ -36,13 +36,8 @@ $ seq 5 | ./softmax
 0.23412165725273662
 0.6364086465588308
 ```
-- 標準入力から 1 行ごとに値を読み取り、最大値シフト込みの Softmax で正規化します。
+- 標準入力から1行ごとに値を読み取り、最大値シフト込みのSoftmaxで正規化します。
 
-## ライセンスと出典
-- SPDX-License-Identifier: BSD-3-Clause  
-- © 2025 Shunsuke Fukuoka
-
-このソフトウェアパッケージは，3 条項 BSD ライセンスの下，再頒布および使用が許可されます。  
-このパッケージは，上田隆一由来のコード（© 2025 Ryuichi Ueda）を利用しています。  
-このパッケージのコードは，下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを，本人の許可を得て自身の著作としたものです。  
-- [ryuichiueda/slides_marp/tree/master/robosys2025](https://github.com/ryuichiueda/slides_marp/tree/master/robosys2025)
+## ライセンスおよびコピーライト
+本リポジトリはBSD-3-Clauseライセンスです。詳細は`LICENSE`を参照してください。  
+©2025 Shunsuke Fukuoka
